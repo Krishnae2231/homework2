@@ -1,6 +1,6 @@
 ---
 title: "Homework - 1"
-author: "Krishna Ramachandra(24200269)"
+author: "Krishna Ramachandra(24200269) "
 format: pdf
 editor: visual
 ---
@@ -33,7 +33,7 @@ head(mtcars)
 summary(mtcars[, c("mpg", "wt", "cyl")])
 ```
 
-### **Scatter Plot** 
+### **Scatter Plot**
 
 ```{r}
 #| echo: false
@@ -61,10 +61,24 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = as.factor(cyl))) +
 
 <!-- -->
 
--    **Cylinders as a differentiator**:
+-   **Cylinders as a differentiator**:
 
-    -    4-cylinder cars (red) are generally lighter and more fuel-efficient.
+```         
+-    4-cylinder cars (red) are generally lighter and more fuel-efficient.
 
-    -    6-cylinder cars (green) are in the middle range for both weight and mpg.
+-    6-cylinder cars (green) are in the middle range for both weight and mpg.
 
-    -    8-cylinder cars (blue) are heavier and less fuel-efficient.
+-    8-cylinder cars (blue) are heavier and less fuel-efficient.
+```
+
+## Homework - 2
+
+```{r}
+# Plotting a histogram of miles per gallon
+hist(mtcars$mpg,
+     main = "Histogram of Miles Per Gallon (mpg)",
+     xlab = "Miles Per Gallon",
+     col = "lightblue",
+     border = "black")
+
+```
