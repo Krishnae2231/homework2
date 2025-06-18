@@ -88,5 +88,12 @@ hist(mtcars$mpg,
 #### Commit - 2
 
 ```{r}
+# Boxplot of mpg by number of cylinders
+boxplot(mpg ~ cyl,
+        data = mtcars,
+        main = "MPG by Number of Cylinders",
+        xlab = "Number of Cylinders",
+        ylab = "Miles Per Gallon (mpg)",
+        col = c("orange", "lightblue", "lightgreen"))
 
 ```
