@@ -73,6 +73,8 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = as.factor(cyl))) +
 
 ## Homework - 2
 
+#### Commit - 1
+
 ```{r}
 # Plotting a histogram of miles per gallon
 hist(mtcars$mpg,
@@ -80,5 +82,11 @@ hist(mtcars$mpg,
      xlab = "Miles Per Gallon",
      col = "lightblue",
      border = "black")
+
+```
+
+#### Commit - 2
+
+```{r}
 
 ```
