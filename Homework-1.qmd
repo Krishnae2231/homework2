@@ -1,0 +1,70 @@
+---
+title: "Homework - 1"
+author: "Krishna Ramachandra(24200269)"
+format: pdf
+editor: visual
+---
+
+```{r}
+#| echo: false
+#Loading the Dataset
+data(mtcars)
+```
+
+### Sample of the MtCars dataset
+
+```{r}
+#| echo: false
+#Displaying the first 5 rows of the dataset
+head(mtcars)
+```
+
+#### ***Description:***
+
+*The mtcars dataset comprises fuel consumption and 10 aspects of automobile design and performance for 32 car models from the 1973–74 Motor Trend magazine.*
+
+*Each row corresponds to a different car model, and each column is a numeric attribute related to that car.*
+
+### **Summary**
+
+```{r}
+#| echo: false
+#Displaying the statistics of 3 columns of the dataset
+summary(mtcars[, c("mpg", "wt", "cyl")])
+```
+
+### **Scatter Plot** 
+
+```{r}
+#| echo: false
+#Importing the library
+library(ggplot2)
+
+# Creating the scatter plot
+ggplot(mtcars, aes(x = wt, y = mpg, color = as.factor(cyl))) +
+  geom_point(size = 3) +
+  #Setting the title and name of the axis for the plot
+  labs(
+    title = "Scatter Plot of Fuel Efficiency vs. Car Weight",
+    subtitle = "Grouped by Number of Cylinders",
+    x = "Weight (1000 lbs)",
+    y = "Miles Per Gallon (mpg)",
+    color = "Cylinders"
+  ) +
+  theme_minimal()
+
+```
+
+-   **Negative correlation**:
+
+    There is a **clear downward trend**, showing that **as weight increases, fuel efficiency decreases**. Heavier cars tend to consume more fuel.
+
+<!-- -->
+
+-    **Cylinders as a differentiator**:
+
+    -    4-cylinder cars (red) are generally lighter and more fuel-efficient.
+
+    -    6-cylinder cars (green) are in the middle range for both weight and mpg.
+
+    -    8-cylinder cars (blue) are heavier and less fuel-efficient.
